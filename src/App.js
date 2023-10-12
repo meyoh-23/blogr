@@ -1,6 +1,5 @@
 import { Box, ThemeProvider, createTheme } from "@mui/material";
-import { LastlButton, NutralButton, PrimaryButton, SecondaryButton } from "./components/utils/Button";
-
+import Navbar from "./components/Navbar";
 
 function App() {
 const theme = createTheme({
@@ -21,8 +20,10 @@ const theme = createTheme({
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
-      
+      <Box
+      boxSizing="border-box"
+      >
+      <Navbar />
       </Box>
   </ThemeProvider>
   );

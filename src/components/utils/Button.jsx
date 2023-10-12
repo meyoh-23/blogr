@@ -7,7 +7,7 @@ export const PrimaryButton = () => {
     size="large"
     variant="outlined"
     sx={{
-        padding: "25px",
+        padding: "15px",
         borderRadius: "40px",
         background: "hsl(0, 0%, 100%)",
         color: "hsl(353, 100%, 62%)",
@@ -17,6 +17,7 @@ export const PrimaryButton = () => {
         fontWeight: "600",
         fontSize: "1rem",
         textTransform: "capitalize",
+        whiteSpace: "nowrap",
         "&:hover": {
             backgroundColor: "primary.light",
             cursor: "pointer"
