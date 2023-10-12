@@ -6,7 +6,6 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [navigateConect, setNavigateConnect] = useState(false);
@@ -177,57 +176,34 @@ const Navbar = () => {
                     }
                 </Button>
                 <Drawer
-                bgcolor="transparent"
+                PaperProps={{
+                    sx: {
+                        backgroundColor: "#fff",
+                        marginTop: "7rem",
+                        width: "90vw",
+                        height: "auto",
+                        mx: "auto",
+                        borderRadius: "10px",
+                    }
+                }}
                 anchor='top'
                 open={mobileMenu}
                 onClose={()=>setMobileMenu(false)}
                 onOpen={()=>setMobileMenu(true)}
-                sx={{
-                    display: {
-                        xs: "flex",
-                        sm: "none",
-                    },
-                }}
                 >
                     <Box
-                    bgcolor="transparent"
-                        sx={{
-                            maxWidth: "80vw",
-                            my: "4rem",
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                        }}
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                    }}
                     >
-                        <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                        }}
-                        >
-                            <Typography
-                            sx={{
-                                textTransform: "capitalize",
-                                color: "hsl(0, 0%, 100%)",
-                                fontFamily: "'Ubuntu', sans-serif",
-                                fontWeight: "700",
-                            }}
-                            >
-                                blogr
-                            </Typography>
-                            <Button
-                            onClick={()=>setMobileMenu(false)}
-                            >
-                                <CloseIcon/>
-                            </Button>
-                        </Box>
                         <List
                         sx={{
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "flex-center",
-                            background: "blue",
+                            borderBottom: "2px hsl(240, 2%, 79%)"
                         }}
                         >
                             <ListItem>
@@ -243,6 +219,17 @@ const Navbar = () => {
                                 item 1
                             </ListItem>
                         </List>
+                        <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-around",
+                            py: "1rem",
+                        }}
+                        >
+                            <SecondaryButton/>
+                            <PrimaryButton/>
+                        </Box>
                     </Box>
                 </Drawer>
             </AppBar>

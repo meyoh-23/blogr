@@ -18,6 +18,7 @@ export const PrimaryButton = () => {
         fontSize: "1rem",
         textTransform: "capitalize",
         whiteSpace: "nowrap",
+        display: "inline-block",
         "&:hover": {
             backgroundColor: "primary.light",
             cursor: "pointer"
@@ -35,7 +36,10 @@ export const SecondaryButton = () => {
     sx={{
         padding: "25px",
         background: "inherit",
-        color: "hsl(0, 0%, 100%)",
+        color: {
+            xs: "secondary.light",
+            sm: "hsl(0, 0%, 100%)",
+        },
         height: "40px",
         fontFamily: "'League Spartan', sans-serif",
         fontWeight: "600",
