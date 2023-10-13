@@ -13,7 +13,7 @@ const Navbar = () => {
     const [navItemThree, setNavItemThree] = useState(false);
 
     return (
-        <Box>
+        <Box >
             <AppBar
             elevation={0}
             variant='nav'
@@ -142,9 +142,6 @@ const Navbar = () => {
                                     borderRadius: "20px",
                                 }}
                                 >
-                                    <Typography>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptates nam autem ea odit dolores delectus porro sunt eligendi eos totam voluptatibus dicta, dolore asperiores magnam, amet inventore ex laboriosam!
-                                    </Typography>
                                     <List
                                     listStyle="none"
                                     sx={{

@@ -1,5 +1,6 @@
-import { Box, ThemeProvider, createTheme } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
 const theme = createTheme({
@@ -18,12 +19,24 @@ const theme = createTheme({
   }
 })
 
+// change the background later
+const Header = () => {
+  return(
+    <Box
+    
+    >
+      <Navbar />
+      <Hero/>
+    </Box>
+)}
+
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline/>
       <Box
       boxSizing="border-box"
       >
-      <Navbar />
+      <Header/>
       </Box>
   </ThemeProvider>
   );

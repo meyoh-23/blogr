@@ -56,11 +56,10 @@ export const NutralButton = () => {
     size="large"
     variant="outlined"
     sx={{
-        padding: "25px",
+        padding: "10px",
         borderRadius: "40px",
         background: "hsl(0, 0%, 100%)",
         color: "hsl(353, 100%, 62%)",
-        height: "40px",
         borderColor: "hsl(240, 2%, 79%)",
         fontFamily: "'League Spartan', sans-serif",
         fontWeight: "600",
@@ -81,11 +80,10 @@ export const LastlButton = () => {
     size="large"
     variant="outlined"
     sx={{
-        padding: "25px",
+        padding: "10px",
         borderRadius: "40px",
         background: "transparent",
-        color: "hsl(0, 0%, 100%)",
-        height: "40px",
+        color: "hsl(240, 2%, 79%)",
         borderColor: "hsl(0, 0%, 100%)",
         fontFamily: "'League Spartan', sans-serif",
         fontWeight: "600",
