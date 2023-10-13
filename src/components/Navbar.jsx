@@ -26,6 +26,7 @@ const Navbar = () => {
                     sm: "3rem",
                 },
                 py: "3rem",
+                backgroundColor: "transparent",
             }}
             >
                 <Box

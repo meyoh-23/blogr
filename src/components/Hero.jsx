@@ -1,21 +1,34 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { LastlButton, NutralButton } from './utils/Button';
+import Navbar from './Navbar';
+import desktopHeroPatten from './../assets/images/bg-pattern-intro-desktop.svg';
+import mobileHeroPattern from './../assets/images/bg-pattern-intro-mobile.svg';
 
 const Hero = () => {
     return (
     <Box variant='header'
     margin='0'
-    bgcolor="primary.main"
+    bgcolor="hsl(13, 100%, 72%)"
     borderRadius='0px 0px 0px 120px'
+    sx={{
+        backgroundImage: {
+            xs: `url(${desktopHeroPatten})`,
+            sm: `url(${mobileHeroPattern})`,
+        },
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+    }}
     >
+        <Navbar/>
         <Box variant='div'
         sx={{
             display: "flex",
             flexDirection: "column",
             height: {
                 xs: "80vh",
-                sm: "60vh",
+                sm: "70vh",
             },
             justifyContent: "center",
             alignItems: "center",
@@ -29,7 +42,8 @@ const Hero = () => {
                     fontFamily: "'Overpass', sans-serif",
                     fontWeight: "600",
                     textAlign: "center",
-                    my: "1.25rem",
+                    my: "2.25rem",
+                    paddingTop: "4.5rem",
                 }}
                 >
                     A modern <br/> publishing platform

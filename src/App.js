@@ -1,5 +1,4 @@
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 function App() {
@@ -19,16 +18,6 @@ const theme = createTheme({
   }
 })
 
-// change the background later
-const Header = () => {
-  return(
-    <Box
-    
-    >
-      <Navbar />
-      <Hero/>
-    </Box>
-)}
 
   return (
     <ThemeProvider theme={theme}>
@@ -36,7 +25,7 @@ const Header = () => {
       <Box
       boxSizing="border-box"
       >
-      <Header/>
+      <Hero/>
       </Box>
   </ThemeProvider>
   );
