@@ -18,7 +18,6 @@ export const PrimaryButton = () => {
         fontSize: "1rem",
         textTransform: "capitalize",
         whiteSpace: "nowrap",
-        display: "inline-block",
         "&:hover": {
             backgroundColor: "primary.light",
             cursor: "pointer"

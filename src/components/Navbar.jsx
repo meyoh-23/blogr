@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { AppBar, Box,Button, Drawer, List, ListItem, Typography } from '@mui/material';
+import { AppBar, Box,Button, Drawer, Link, List, ListItem, Typography } from '@mui/material';
 import { PrimaryButton, SecondaryButton} from './utils/Button'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -9,8 +9,9 @@ import CloseIcon from '@mui/icons-material/Close';
 const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [navigateConect, setNavigateConnect] = useState(false);
-    //const [openMiniDrawer, setOpenMiniDrawer] = useState(false);
-
+    const [navItemOne, setNavItemOne] = useState( false);
+    const [navItemTwo, setNavItemTwo] = useState( false);
+    const [navItemThree, setNavItemThree] = useState(false);
 
     return (
         <Box>
@@ -198,33 +199,123 @@ const Navbar = () => {
                         justifyContent: "space-between",
                     }}
                     >
-                        <List
+                        <Box
+                        sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        borderBottom: "1px solid hsl(240, 2%, 79%)"
+                    }}
+                        >
+                            <List
                         sx={{
                             display: "flex",
                             flexDirection: "column",
-                            justifyContent: "flex-center",
-                            borderBottom: "2px hsl(240, 2%, 79%)"
+                            borderBottom: "2px hsl(240, 2%, 79%)",
+                            mx: "auto"
                         }}
                         >
                             <ListItem>
-                                item 1
+                                <Link href="#products"
+                                underline='none'
+                                onClick={()=>setNavItemOne(!navItemOne)}
+                                sx={{
+                                    textTransform: "capitalize",
+                                    color: "hsl(240, 10%, 16%)",
+                                    fontSize: "1rem",
+                                    "&:hover": {
+                                        color: "hsl(240, 2%, 79%)",
+                                        cursor: "pointer",
+                                    }
+
+                                }}
+                                >
+                                    products {
+                                    navItemOne? <ExpandLessIcon/>
+                                    : <ExpandMoreIcon/>
+                                    }
+                                </Link>
                             </ListItem>
                             <ListItem>
-                                item 1
+                                <Link href="#products"
+                                underline='none'
+                                onClick={()=>setNavItemTwo(!navItemTwo)}
+                                sx={{
+                                    textTransform: "capitalize",
+                                    color: "hsl(240, 10%, 16%)",
+                                    fontSize: "1rem",
+                                    "&:hover": {
+                                        color: "hsl(240, 2%, 79%)",
+                                        cursor: "pointer",
+                                    }
+
+                                }}
+                                >
+                                    products {
+                                    navItemTwo? <ExpandLessIcon/>
+                                    : <ExpandMoreIcon/>
+                                    }
+                                </Link>
                             </ListItem>
-                            <ListItem>
-                                item 1
-                            </ListItem>
-                            <ListItem>
-                                item 1
+                            <ListItem
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                            }}
+                            >
+                                <Link href="#products"
+                                underline='none'
+                                onClick={()=>setNavItemThree(!navItemThree)}
+                                sx={{
+                                    textTransform: "capitalize",
+                                    color: "hsl(240, 10%, 16%)",
+                                    fontSize: "1rem",
+                                    "&:hover": {
+                                        color: "hsl(240, 2%, 79%)",
+                                        cursor: "pointer",
+                                    }
+                                }}
+                                >
+                                    products {
+                                    navItemThree? <ExpandLessIcon/>
+                                    : <ExpandMoreIcon/>
+                                    }
+                                </Link>
+                                {navItemThree && <List 
+                                    sx={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        borderBottom: "2px hsl(240, 2%, 79%)",
+                                        mx: "auto"
+                                    }}
+                                    >
+                                        <ListItem>
+                                            <Link
+                                            underline='none'
+                                            sx={{
+                                                textTransform: "capitalize",
+                                                color: "hsl(240, 10%, 16%)",
+                                                fontSize: "1rem",
+                                                "&:hover": {
+                                                    color: "hsl(240, 2%, 79%)",
+                                                    cursor: "pointer",
+                                                }
+                                            }}
+                                            >
+                                                hello
+                                            </Link>
+                                        </ListItem>
+                                    </List>}
                             </ListItem>
                         </List>
+                        </Box>
                         <Box
                         sx={{
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "space-around",
                             py: "1rem",
+                            mx: "auto",
                         }}
                         >
                             <SecondaryButton/>
