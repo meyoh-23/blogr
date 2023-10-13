@@ -1,5 +1,6 @@
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
 const theme = createTheme({
@@ -26,6 +27,7 @@ const theme = createTheme({
       boxSizing="border-box"
       >
       <Hero/>
+      <About/>
       </Box>
   </ThemeProvider>
   );
