@@ -8,7 +8,6 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
-    const [navigateConect, setNavigateConnect] = useState(false);
     const [navItemOne, setNavItemOne] = useState( false);
     const [navItemTwo, setNavItemTwo] = useState( false);
     const [navItemThree, setNavItemThree] = useState(false);
@@ -17,6 +16,7 @@ const Navbar = () => {
         <Box>
             <AppBar
             elevation={0}
+            variant='nav'
             sx={{
                 display: "flex",
                 flexDirection: "row",
@@ -62,7 +62,10 @@ const Navbar = () => {
                             justifyContent: "space-evenly",
                         }}
                         >
-                            <ListItem
+                            <Link
+                            underline='none'
+                            href='#products'
+                            onClick={()=>setNavItemOne(!navItemOne)}
                             sx={{
                                 color: "hsl(240, 2%, 79%)",
                                 fontFamily: "'Overpass', sans-serif;",
@@ -75,9 +78,17 @@ const Navbar = () => {
                                 }
                             }}
                             >
-                                products
-                            </ListItem>
-                            <ListItem
+                                <span style={{whiteSpace: "nowrap"}}>
+                                    products{
+                                    navItemOne? <ExpandLessIcon/>
+                                    : <ExpandMoreIcon/>
+                                }
+                                </span>
+                            </Link>
+                            <Link
+                            href='#company'
+                            underline='none'
+                            onClick={()=>setNavItemTwo(!navItemTwo)}
                             sx={{
                                 color: "hsl(240, 2%, 79%)",
                                 fontFamily: "'Overpass', sans-serif;",
@@ -90,9 +101,15 @@ const Navbar = () => {
                                 }
                             }}
                             >
-                                company<ExpandMoreIcon/>
-                            </ListItem>
-                            <ListItem
+                                <span style={{whiteSpace: "nowrap"}}>
+                                    company{
+                                    navItemTwo? <ExpandLessIcon/>
+                                    : <ExpandMoreIcon/>
+                                }
+                                </span>
+                            </Link>
+                            <Link
+                            underline='none'
                             sx={{
                                 color: "hsl(240, 2%, 79%)",
                                 fontFamily: "'Overpass', sans-serif;",
@@ -105,13 +122,16 @@ const Navbar = () => {
                                 },
                                 position: "relative",
                             }}
-                            onClick={()=>setNavigateConnect(!navigateConect)}
+                            onClick={()=>setNavItemThree(!navItemThree)}
                             >
-                                connect{
-                                    navigateConect? <ExpandLessIcon/>
+                                <span style={{whiteSpace: "nowrap"}}>
+                                    connect{
+                                    navItemThree? <ExpandLessIcon/>
                                     : <ExpandMoreIcon/>
                                 }
-                            {navigateConect && <Box
+                                </span>
+                                
+                            {navItemThree && <Box
                                 sx={{
                                     width: "150px",
                                     height: "150px",
@@ -122,6 +142,9 @@ const Navbar = () => {
                                     borderRadius: "20px",
                                 }}
                                 >
+                                    <Typography>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptates nam autem ea odit dolores delectus porro sunt eligendi eos totam voluptatibus dicta, dolore asperiores magnam, amet inventore ex laboriosam!
+                                    </Typography>
                                     <List
                                     listStyle="none"
                                     sx={{
@@ -142,7 +165,7 @@ const Navbar = () => {
                                     </List>
                                 </Box>
                             }
-                            </ListItem>
+                            </Link>
                         </List>
                     </Box>
                 </Box>
@@ -237,7 +260,7 @@ const Navbar = () => {
                                 </Link>
                             </ListItem>
                             <ListItem>
-                                <Link href="#products"
+                                <Link href="#company"
                                 underline='none'
                                 onClick={()=>setNavItemTwo(!navItemTwo)}
                                 sx={{
@@ -251,7 +274,7 @@ const Navbar = () => {
 
                                 }}
                                 >
-                                    products {
+                                    company {
                                     navItemTwo? <ExpandLessIcon/>
                                     : <ExpandMoreIcon/>
                                     }
@@ -263,7 +286,7 @@ const Navbar = () => {
                                 flexDirection: "column",
                             }}
                             >
-                                <Link href="#products"
+                                <Link
                                 underline='none'
                                 onClick={()=>setNavItemThree(!navItemThree)}
                                 sx={{
@@ -276,7 +299,7 @@ const Navbar = () => {
                                     }
                                 }}
                                 >
-                                    products {
+                                    connect {
                                     navItemThree? <ExpandLessIcon/>
                                     : <ExpandMoreIcon/>
                                     }
@@ -289,20 +312,60 @@ const Navbar = () => {
                                         mx: "auto"
                                     }}
                                     >
-                                        <ListItem>
+                                        <ListItem
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            width: "75vw",
+                                            height: "auto",
+                                            my: "1rem",
+                                            alignContent: "center",
+                                            justifyContent: "center",
+                                            backgroundColor: "hsl(240, 2%, 79%)",
+                                            borderRadius: "10px",
+                                        }}
+                                        >
                                             <Link
                                             underline='none'
                                             sx={{
                                                 textTransform: "capitalize",
                                                 color: "hsl(240, 10%, 16%)",
                                                 fontSize: "1rem",
-                                                "&:hover": {
-                                                    color: "hsl(240, 2%, 79%)",
-                                                    cursor: "pointer",
-                                                }
+                                                my: "0.5rem",
+                                                cursor: "pointer",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                fontWeight: "300",
                                             }}
                                             >
-                                                hello
+                                                Contact
+                                            </Link>
+                                            <Link
+                                            underline='none'
+                                            sx={{
+                                                textTransform: "capitalize",
+                                                color: "hsl(240, 10%, 16%)",
+                                                fontSize: "1rem",
+                                                my: "0.5rem",
+                                                cursor: "pointer",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                fontWeight: "300",
+                                            }}
+                                            >
+                                                newsletter
+                                            </Link>
+                                            <Link
+                                            underline='none'
+                                            sx={{
+                                                textTransform: "capitalize",
+                                                color: "hsl(240, 10%, 16%)",
+                                                fontSize: "1rem",
+                                                my: "0.5rem",
+                                                cursor: "pointer",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                fontWeight: "300",
+                                            }}
+                                            >
+                                                linkedIn
                                             </Link>
                                         </ListItem>
                                     </List>}
