@@ -18,6 +18,7 @@ const Navbar = () => {
             <AppBar
             elevation={0}
             variant='nav'
+            position='sticky'
             sx={{
                 display: "flex",
                 flexDirection: "row",

@@ -109,27 +109,22 @@ const About = () => {
           <Grid
           item
           xs={6}
-          width="35vw"
+          position='relative'
           >
             <Box
             sx={{
               marginLeft: "3rem",
-              position: "relative",
+              top: "0",
             }}
             >
-              <Box
-              sx={{
-                backgroundImage: `url(${bgCirclePattern})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                height: "500px",
-                width: "75%",
-                position: "absolute",
-                top: 0,
-                right: "-10px",
-              }}
-              >
+              <Box>
+                <img src={bgCirclePattern} alt="bgCirclePattern" 
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                  display: 'block'
+                }}
+                />
               </Box>
             </Box>
           </Grid>
@@ -154,7 +149,7 @@ const About = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           height: "340px",
-          width:"100vw",
+
         }}
         >
 
