@@ -2,7 +2,6 @@ import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import phoneIllustration from './../assets/images/illustration-phones.svg';
 
-
 const Infrastructure = () => {
   return (
     <Box
@@ -23,9 +22,7 @@ const Infrastructure = () => {
         >
           <Box
           sx={{position:"relative"}}
-          >
-
-          
+          >          
           <Box
           sx={{
             position: "absolute",
@@ -72,7 +69,10 @@ const Infrastructure = () => {
             <Typography
             variant='h4'
             sx={{
-              my: "2rem",
+              mt: {
+                xs: "12rem",
+                sm:"2rem",
+              },
               color: "hsl(0, 0%, 100%)",
               fontFamily: "'Overpass', sans-serif",
               fontWeight: "600",
