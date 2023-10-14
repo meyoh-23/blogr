@@ -6,7 +6,10 @@ const Footer = () => {
     <Box bgcolor="hsl(237, 23%, 32%)"
     borderRadius='0 50px 0 0'
     sx={{
-        marginTop: "20rem",
+        marginTop: {
+            xs: "3rem",
+            sm: "19rem",
+        },
         py: "4.5rem",
 
     }}
