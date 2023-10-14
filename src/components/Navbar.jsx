@@ -136,11 +136,11 @@ const Navbar = () => {
                             {navItemThree && <Box
                                 sx={{
                                     width: "150px",
-                                    height: "150px",
+                                    height: "auto",
                                     position: "absolute",
                                     top: "40px",
                                     left: "-10px",
-                                    background: "#000",
+                                    background: "hsl(0, 0%, 100%)",
                                     borderRadius: "20px",
                                 }}
                                 >
@@ -150,16 +150,62 @@ const Navbar = () => {
                                         display: "flex",
                                         flexDirection: "column",
                                         justifyContent: "flex-start",
+                                        padding: "0.8rem"
                                     }}
                                     >
                                         <ListItem>
-                                            contact
+                                            <Link href='#contacts'
+                                            underline='none'
+                                            sx={{
+                                                color: "hsl(237, 17%, 21%)",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                textTransform: "capitalize",
+                                                fontWeight: "300",
+                                                fontSize: "1.2rem",
+                                                "&: hover": {
+                                                    color: "hsl(207, 13%, 34%)",
+                                                    cursor: "pointer",
+                                                },
+                                            }}
+                                            >
+                                                Contact
+                                            </Link>
                                         </ListItem>
                                         <ListItem>
-                                            contact
+                                            <Link href='#linkedIn'
+                                            underline='none'
+                                            sx={{
+                                                color: "hsl(237, 17%, 21%)",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                textTransform: "capitalize",
+                                                fontWeight: "300",
+                                                fontSize: "1.2rem",
+                                                "&: hover": {
+                                                    color: "hsl(207, 13%, 34%)",
+                                                    cursor: "pointer",
+                                                },
+                                            }}
+                                            >
+                                                linkedIn
+                                            </Link>
                                         </ListItem>
                                         <ListItem>
-                                            contact
+                                            <Link href='#newsletter'
+                                            underline='none'
+                                            sx={{
+                                                color: "hsl(237, 17%, 21%)",
+                                                fontFamily:"'Overpass', sans-serif",
+                                                textTransform: "capitalize",
+                                                fontWeight: "300",
+                                                fontSize: "1.2rem",
+                                                "&: hover": {
+                                                    color: "hsl(207, 13%, 34%)",
+                                                    cursor: "pointer",
+                                                },
+                                            }}
+                                            >
+                                                newsletter
+                                            </Link>
                                         </ListItem>
                                     </List>
                                 </Box>
