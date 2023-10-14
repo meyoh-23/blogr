@@ -13,7 +13,8 @@ const Navbar = () => {
     const [navItemThree, setNavItemThree] = useState(false);
 
     return (
-        <Box >
+        <Box 
+        >
             <AppBar
             elevation={0}
             variant='nav'

@@ -19,7 +19,8 @@ const Footer = () => {
                 sm: "space-around",
             },
             alignItems: {
-                xs: "flex-start",
+                xs: "center",
+                sm: "flex-start",
             },
             flexDirection: {
                 xs: "column",
