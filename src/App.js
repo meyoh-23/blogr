@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Infrastructure from "./components/Infrastructure";
 import Desktop from "./components/Desktop";
+import Footer from "./components/Footer";
 
 function App() {
 const theme = createTheme({
@@ -21,7 +22,6 @@ const theme = createTheme({
   }
 })
 
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
@@ -29,9 +29,12 @@ const theme = createTheme({
       boxSizing="border-box"
       >
       <Hero/>
-      <About/>
-      <Infrastructure/>
-      <Desktop/>
+      <Box variant='main'>
+        <About/>
+        <Infrastructure/>
+        <Desktop/>
+      </Box>
+      <Footer/>
       </Box>
   </ThemeProvider>
   );
